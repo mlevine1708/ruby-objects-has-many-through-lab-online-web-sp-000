@@ -18,7 +18,7 @@ end
 
 
 def doctors
-  appointments.collect {|appointment| appointmet.doctor}
+  appointments.map {&:doctor}
 end
 
 

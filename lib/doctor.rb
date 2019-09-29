@@ -9,8 +9,12 @@ def initialize(name)
   @@all << self
 end
 
+def self.all
+  @@all
+end
+
 def new_appointment(patient, date)
- Appointment.new(patient, date, self)
+ Appointment.new(date, patient, self)
 end
 
 def appointments
@@ -18,12 +22,7 @@ def appointments
 end
 
 def patients
-appointments.map {|appointment| appointment.patient}
-end
-
-
-def self.all
-  @@all
+appointments.map(&:patient)
 end
 
 

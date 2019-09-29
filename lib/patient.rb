@@ -18,7 +18,7 @@ end
 
 
 def doctors
-  appointments.map {:doctor}
+  appointments.map (&:doctor)
 end
 
 

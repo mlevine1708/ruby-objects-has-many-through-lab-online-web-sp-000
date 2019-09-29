@@ -5,6 +5,7 @@ attr_accessor :name, :appointment, :doctor
 
 def initialize(name)
   @name = name
+  @appointments = appointment 
   @@all << self
 end
 

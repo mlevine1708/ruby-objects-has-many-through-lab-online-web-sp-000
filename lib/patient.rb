@@ -4,8 +4,7 @@ attr_accessor :name, :appointment, :doctor
 @@all = []
 
 def initialize(name)
-  @name = name
-  @appointments = appointment 
+  @name = name 
   @@all << self
 end
 
